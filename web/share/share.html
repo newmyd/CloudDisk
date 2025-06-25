@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		
+		<link rel="shortcut icon" type="image/x-icon" href="../favicon.ico" media="screen" />
+		<meta charset="utf-8">
+		<title>Share</title>
+		<script src="../main/jquery/jquery-3.6.0.slim.min.js"></script>
+
+		<link rel="stylesheet" href="../main/bootstrap/css/bootstrap.min.css" />
+		<script src="../main/bootstrap/js/bootstrap.bundle.min.js"></script>
+		<script src="../main/bootstrap/js/bootstrap.min.js"></script>
+		
+		<link rel="stylesheet" type="text/css" href="./share.css" />
+		<link rel="stylesheet" type="text/css" href="../main/index.css" />
+	</head>
+	<body>
+		<nav class="navbar navbar-expand-sm navbar-light bg-light">
+			<a class="navbar-brand" href="../index.html">CloudDisk</a>
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item">
+						<a class="nav-link" href="../file/file.html">File</a>
+					</li>
+					
+					<li class="nav-item">
+						<a class="nav-link" href="../upload/upload.html">Upload</a>
+					</li>
+					
+					<li class="nav-item">
+						<a class="nav-link" href="./share.html" style="color: blue;">Share</a>
+					</li>
+					
+					<li class="nav-item">
+						<a class="nav-link" href="../shared/shared.html">Shared</a>
+					</li>
+				</ul>
+				
+				<form class="form-inline my-2 my-lg-0">
+					<input id="searchInput" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" />
+					<button id="search" class="btn btn-outline-success my-2 my-sm-0" type="submit" onclick="searchName();return false;">Search</button>
+				</form>
+				
+				<ul class="navbar-nav">
+					<li class="nav-item active">
+						<a id="user" class="navbar-brand" href="../login/login.html">
+							Login
+						</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+		
+		<script type="text/javascript" src="../main/check.js"></script>
+		
+		<br />
+		
+		<div class="form-inline my-2 my-lg-0">
+			<div style="margin: auto; width: 80%;">
+				<button class="btn btn-outline-success my-2 my-sm-0" onclick="allch();return false;">All</button>
+				<button class="btn btn-outline-success my-2 my-sm-0" onclick="can();return false;">Cancel</button>
+				<button class="btn btn-outline-success my-2 my-sm-0" onclick="rev();return false;">Reverse</button>
+				<button class="btn btn-outline-success my-2 my-sm-0" onclick="down();return false;">Download</button>
+				<button class="btn btn-outline-success my-2 my-sm-0" onclick="ac();return false;">Accept</button>
+				<button class="btn btn-outline-success my-2 my-sm-0" onclick="del();return false;">Delete</button>
+				<input id="nameInput" class="form-control mr-sm-2" type="text" placeholder="New Name" />
+				<button class="btn btn-outline-success my-2 my-sm-0" onclick="rename();return false;">Rename</button>
+				<input id="userInput" class="form-control mr-sm-2" type="text" placeholder="Username" />
+				<button class="btn btn-outline-success my-2 my-sm-0" onclick="share();return false;">Share</button>
+			
+		
+				<br />
+				<br />
+				
+				<table class="table table-striped table-sm">
+				  <thead>
+					<tr>
+						<th>Choose</th>
+						<th>
+							Name
+							<img onclick="st('name', 'nu', 'uf');" id="nu" src="../main/img/u.svg" />
+							<img onclick="st('name DESC', 'nd', 'df');" id="nd" src="../main/img/d.svg" />
+						</th>
+						<th>
+							Size
+							<img onclick="st('siz', 'su', 'uf');" id="su" src="../main/img/u.svg" />
+							<img onclick="st('siz DESC', 'sd', 'df');" id="sd" src="../main/img/d.svg" />
+						</th>
+						<th>
+							User
+							<img onclick="st('user', 'uu', 'uf');" id="uu" src="../main/img/u.svg" />
+							<img onclick="st('user DESC', 'ud', 'df');" id="ud" src="../main/img/d.svg" />
+						</th>
+						<th>
+							Time
+							<img onclick="st('time', 'tu', 'uf');" id="tu" src="../main/img/u.svg" />
+							<img onclick="st('time DESC', 'td', 'df');" id="td" src="../main/img/df.svg" />
+						</th>
+					</tr>
+				  </thead>
+				  <tbody id="file">
+				  </tbody>
+				</table>
+			</div>
+		</div>
+
+		<form class="form-inline my-2 my-lg-0">
+			<div style="margin: auto; font-size: 20px;">
+				<span id="nowPage">0 / 0</span>
+				<button style="margin-left: 50px;" class="btn btn-outline-success my-2 my-sm-0" onclick="fst();return false;">&laquo;</button>
+				<button style="margin-left: 10px;" class="btn btn-outline-success my-2 my-sm-0" onclick="pre();return false;"><</button>
+				<button style="margin-left: 10px;" class="btn btn-outline-success my-2 my-sm-0" onclick="nxt();return false;">></button>
+				<button style="margin-left: 10px;" class="btn btn-outline-success my-2 my-sm-0" onclick="lst();return false;">&raquo;</button>
+				<input id="pag" style="margin-left: 50px" class="form-control mr-sm-2" type="text" placeholder="Page" />
+				<button style="margin-left: 10px;" class="btn btn-outline-success my-2 my-sm-0" type="submit" onclick="go();return false;">Go</button>
+			</div>
+		</form>
+		<script type="text/javascript" src="./share.js"></script>
+		
+	</body>
+</html>

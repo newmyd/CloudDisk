@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="shortcut icon" type="image/x-icon" href="../favicon.ico" media="screen" />
+		<meta charset="utf-8">
+		<title>User</title>
+		<script src="../main/jquery/jquery-3.6.0.slim.min.js"></script>
+
+		<link rel="stylesheet" href="../main/bootstrap/css/bootstrap.min.css" />
+		<script src="../main/bootstrap/js/bootstrap.bundle.min.js"></script>
+		<script src="../main/bootstrap/js/bootstrap.min.js"></script>
+
+		<link rel="stylesheet" type="text/css" href="./user.css" />
+		<link rel="stylesheet" type="text/css" href="../main/index.css" />
+		<script src="./ajax.js"></script>
+	</head>
+	<body>
+		<nav class="navbar navbar-expand-sm navbar-light bg-light">
+			<a class="navbar-brand" href="../index.html">CloudDisk</a>
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav mr-auto">
+
+					<li class="nav-item">
+						<a class="nav-link" href="../file/file.html">File</a>
+					</li>
+
+					<li class="nav-item">
+						<a class="nav-link" href="../upload/upload.html">Upload</a>
+					</li>
+
+					<li class="nav-item">
+						<a class="nav-link" href="../share/share.html">Share</a>
+					</li>
+
+					<li class="nav-item">
+						<a class="nav-link" href="../shared/shared.html">Shared</a>
+					</li>
+				</ul>
+				<!-- <form class="form-inline my-2 my-lg-0">
+					<input id="searchInput" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" />
+					<button id="search" class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+				</form> -->
+				<ul class="navbar-nav">
+					<li class="nav-item active">
+						<a id="user" class="navbar-brand" href="./user.html" style="color: blue;">
+							Login
+						</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+
+		<br />
+		<br />
+
+		<div class="container">
+
+			<form class="form form-signin">
+				<h2 class="form-signin-heading">User</h2>
+
+				<br />
+				<br />
+
+				<input type="password" id="passWord" class="bot form-control" placeholder="Now Password" />
+
+				<br />
+				<br />
+
+				<input type="text" id="newUserName" class="bot form-control"
+					placeholder="New Username   null means not changing" />
+
+				<br />
+				<br />
+
+				<input type="password" id="newPassWord" class="bot form-control"
+					placeholder="New Password   null means not changing" />
+
+				<br />
+				<br />
+
+				<input type="password" id="newPassWordAgain" class="bot form-control"
+					placeholder="New Password Again" />
+
+				<br />
+				<br />
+
+				<button type="submit" class="bot btn btn-lg btn-success btn-block"
+					onclick="setUser();return false;">Change</button>
+
+				<br />
+				<br />
+
+				<button class="bot btn btn-lg btn-danger btn-block"
+					onclick="$('#confirmDel').modal('toggle');return false;">Delete</button>
+
+				<br />
+				<br />
+
+				<button class="bot btn btn-lg btn-primary btn-block" onclick="logout();return false;">Logout</button>
+
+				<div class="modal" id="confirmDel">
+					<div class="modal-dialog">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h2 class="modal-title">Delete Account</h2>
+							</div>
+							<div class="modal-body">
+								<h3 id="delcfmMsg">Do you want to delete your account?</h3>
+								<br />
+								<br />
+								<button class="btn btn-danger" data-dismiss="modal" onclick="deluser();return false;">Delete</button>
+								<button class="btn btn-primary" data-dismiss="modal">Cancel</button>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<script type="text/javascript" src="../main/check.js"></script>
+				<script type="text/javascript" src="./user.js"></script>
+			</form>
+		</div>
+	</body>
+</html>

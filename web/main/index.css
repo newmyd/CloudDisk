@@ -1,0 +1,15 @@
+.center {
+	margin: auto;
+}
+
+#user {
+	text-align: center;
+	width: auto;
+	margin-left: 20px;
+}
+
+
+#hint {
+	font-size: 40px;
+	text-align: center;
+}
